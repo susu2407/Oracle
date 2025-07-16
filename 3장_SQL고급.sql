@@ -132,3 +132,227 @@ SELECT DISTINCT JOB, DEPNO FROM EMP;
 
 SELECT EMPNO AS 사번, NAME AS 이름, GENDER "성 별" FROM EMP;
 SELECT EMPNO E, NAME N, GENDER G FROM EMP;
+
+-- 실습하기 3-1. 다양한 SQL 숫자 함수 실습
+SELECT SUM(PRICE) AS 합계 FROM Sale;
+select count(*) as 직원수 from emp;
+select count(empno) as 부서수 from emp;
+
+select cell(1.2) from dual;
+select cell(12.8) from dual;
+select floor(1.2) from dual;
+select floor(1.8) from dual;
+select round(1.2) from dual;
+select round(1.8) from dual;
+
+select dbms_random.value from dual;
+select ceil(dbms_random.value * 10) from dual;
+
+-- 실습하기 3-2.다양한 SQL 문자 합수 실습
+select 'Hello ORACLE!', LENGTH('HELLO ORACLE!') FROM DUAL;
+SELECT
+    'HELLO ORACLE!',
+    SUBSTR('HELLO ORACLE!', 1, 3),
+    SUBSTR('HELLO ORACLE!', 3, 2),
+    SUBSTR('HELLO ORACLE!', 5)
+    FROM DUAL;
+SELECT
+    INSTR('HELLO ORACLE!', 'L') AS INSTR_1,
+    INSTR('HELLO ORACLE!', 'L', -1) AS INSTR_2
+FROM DUAL;    
+SELECT '010-1234-5678', REPLACE('010-1234-5678', '-', '') FROM DUAL;
+SELECT 
+    LPAD('Oracle', 10, '#') AS LPAD, // (대상문자열, 전체길이, 패딩문자)
+    RPAD('Oracle', 10,'*') AS RPAD
+FROM DUAL;
+
+//CONCAT : 문자 연결 ★★★ 
+SELECT CONCAT(EMPNO, NAME) FROM EMP WHERE NAME = '이순신';
+SELECT EMPNO || NAME FROM EMP WHERE NAME = '정약용';
+
+SELECT
+    '[ _Oracle_ ]' AS BEFORE,
+    '[' || TRIM('_Orcle_') || ']' AS TRIMED
+FROM DUAL;    
+
+--실습하기 3-3. SQL 날짜 함수 ★★★
+SELECT
+    SYSDATE,
+    SYSDATE - 1,
+    SYSDATE + 1
+FROM DUAL;
+
+---- 놓침.
+// ADD_MONTHS(d, n) : 몇 개월 이후 날짜 조회
+SELECT
+    ADD_MONTHS(SYSDATE, 1),
+    ADD_MONTHS(SYSDATE, -1)
+ FROM DUAL;
+// MONTHS_BETWEEN(d1, d2) : 두 날짜 간 개월 수 계산
+SELECT
+    MONTHS_BETWEEN(DATE '2025-07-13', DATE '2024-07-13') AS 개월차 FROM DUAL;
+// NEXT_DAY(d, '요일') : d 이후의 특정 요일 날짜
+SELECT
+NEXT_DAY(SYSDATE, '월요일') AS 다음_월요일 FROM DUAL;
+
+--실습하기 3-4. SQL 기타 함수 실습
+// TO_CHAR : 날짜 데이터를 문자 데이터로 변환
+SELECT
+    TO_CHAR(SYSDATE, 'YYYY') AS YYYY,
+    TO_CHAR(SYSDATE, 'MM') AS MM,
+    TO_CHAR(SYSDATE, 'DD') AS DD,
+    TO_CHAR(SYSDATE, 'HH24') AS HH24,
+    TO_CHAR(SYSDATE, 'MI') AS MI,
+    TO_CHAR(SYSDATE, 'SS') AS SS,
+    TO_CHAR(SYSDATE, 'YYYY/MM/DD HH24:MI:SS') AS 날짜시간
+ FROM DUAL;
+INSERT INTO EMP VALUES (1011, '안중근', 'M', '부장', 30, TO_CHAR(SYSDATE, 'YYYY/MM/DD'));
+
+// TO_DATE : 문자 데이터를 날짜 데이터로 변환
+SELECT
+    TO_DATE('20250714', 'YYYY/MM/DD') AS 날짜1,
+    TO_DATE('250714', 'YY-MM-DD') AS 날짜2,
+    TO_DATE(SYSDATE, 'YYYY/MM/DD HH24:MI:SS') AS 날짜시간
+ FROM DUAL;
+ 
+INSERT INTO EMP VALUES (1012, '유관순', 'F', '차장', 20, SYSDATE);
+//INSERT INTO EMP VALUES (1013, '윤봉길', 'M', '과장', 30,
+                        // TO_DATE(SYSDATE, 'YYYY-MM-DD HH24:MI:SS'));
+
+-- 여기까지 놓침. 테이블 세팅이 이상해서 복구했음.
+
+SELECT
+    NO,
+    EMPNO,
+    YEAR,
+    MONTH,
+    NVL(PRICE, 0)
+FROM SALE;
+
+SELECT
+    EMPNO, NAME, GENDER, JOB, NVL2(DEPNO, '정규직', '비정규직')
+FROM EMP;
+
+--여기까지 워크북 23페이지 내용
+
+-- 4.그룹화 /워크북 P.24
+-- 실습 4-1. 그룹화
+select empno from sale group by empno; //네추럴 테이블에서 empno(직원번호)를 그룹화 시킴.
+select year from sale group by year;
+select empno, year from sale group by empno, year;
+
+select empno, count(*) as 판매건수 from sale group by empno;
+select empno, sum(price) as 합계 from sale group by empno;
+select empno, avg(price) as 평균 from sale group by empno;
+
+select empno, year, sum(price) as 합계
+    from sale
+    group by empno, year;
+
+select empno, year, sum(price) as 합계
+    from sale
+    group by empno, year
+    order by year asc, 합계 desc; // 연도가 낮은 것부터 나열, 합계가 큰 것 부터 나열
+
+select empno, year, sum(price) as 합계
+    from sale
+    where price >= 50000   
+    group by empno, year
+    order by 합계 desc;
+--50000 이상 가격에 해당되고 -- empno, year을 각각 그룹핑-- 합계가 큰 것부터 나열
+
+--실습 4-2. 그룹화 조건
+select empno, sum(price) as 합계 from sale group by empno HAVING SUM(PRICE) >=200000;
+
+select
+    empno, year, sum(price) as 합계
+    from sale
+    where price >= 50000
+    group by empno, year
+    having sum(price) >=200000
+    order by 합계 desc;
+
+------------------------------------------------------------
+--<5.테이블 집합>
+--실습 5-1
+---중복을 제외시키고 출력
+SELECT EMPNO, MONTH, PRICE FROM SALE WHERE YEAR = 2023
+UNION
+SELECT EMPNO, MONTH, PRICE FROM SALE WHERE YEAR = 2024;
+
+---중복을 포함해서 출력
+SELECT EMPNO, MONTH, PRICE FROM SALE WHERE YEAR = 2023
+UNION ALL
+SELECT EMPNO, MONTH, PRICE FROM SALE WHERE YEAR = 2024;
+
+SELECT EMPNO, YEAR, SUM(PRICE) AS 합계
+    FROM SALE
+    WHERE YEAR = 2023
+    GROUP BY EMPNO, YEAR
+UNION
+SELECT EMPNO, YEAR, SUM(PRICE) AS 합계
+    FROM SALE
+    WHERE YEAR = 2024
+    GROUP BY EMPNO, YEAR
+    ORDER BY YEAR ASC, 합계 DESC;
+
+-- 실습 5-2
+SELECT EMPNO FROM SALE WHERE YEAR = 2023
+INTERSECT
+SELECT EMPNO FROM SALE WHERE YEAR = 2024;
+
+-- 실습 5-3
+SELECT EMPNO FROM SALE WHERE YEAR = 2023
+MINUS
+SELECT EMPNO FROM SALE WHERE YEAR = 2024;
+
+------------------------------------------------
+-- 실습 6-1
+SELECT 
+    *
+FROM EMP E
+JOIN DEPT D
+ON E.DEPNO = D.DEPTNO;
+
+SELECT 
+    *
+FROM EMP E
+JOIN DEPT D
+USING (DEPTNO); -- 조인하려는 두 테이블에 공통의 컬럼명이 있어야 함.
+
+SELECT * FROM EMP E, DEPT D WHERE E.DEPNO = D.DEPTNO;
+
+SELECT
+    S.NO,
+    S.EMPNO,
+    E.NAME,
+    E.JOB,
+    E.REGDATE,
+    E.DEPNO,
+    D.DNAME
+FROM SALE S
+JOIN EMP E ON S.EMPNO = E.EMPNO
+JOIN DEPT D ON E.DEPNO = D.DEPTNO
+WHERE PRICE > 100000 AND YEAR = 2024
+ORDER BY S.PRICE DESC;
+
+--실습 6-2
+DELETE FROM EMP WHERE EMPNO = 1006;
+
+SELECT * FROM SALE S
+LEFT JOIN EMP E ON S.EMPNO = E.EMPNO;
+
+SELECT * FROM SALE S
+RIGHT JOIN EMP E ON S.EMPNO = E.EMPNO;
+
+
+
+
+
+
+
+
+
+
+
+
