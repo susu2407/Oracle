@@ -1,165 +1,117 @@
-//교재 26페이지
+--p26
 select * from emp;
 
+--27
 select * 
 from emp;
 
-//교재 29페이지
-desc dept;
-select * from tab; //35건
+--select * fr
+--om emp;
 
-select empno, ename from emp;
+--select *
+--from em
+--p;
 
-//교재 30페이지
-set pagesize 15
-set linesize 200
-select empno, ename from emp;
+--select em
+--pno from emp;
 
-//교재 32
-set pagesize 50
-col name for a20
+--28
+DESC dept;
 
-select name, 'good morning~~!' "Good Morning"
-from professor;
+--29
+SELECT * FROM tab;
 
-//p.33
-select dname, ',it''s deptno: ', deptno "DNAME AND DEPTNO"
-FROM DEPT;
+SELECT empno, ename FROM emp;
+    --SET PAGESIZE : 세로 줄(행 개수)길이, 15줄마다 제목 재출력
+SET PAGESIZE 15
+    --SET LINESIZE : 가로 너비(문자 수) 길이, 한 줄에 최대20문자까지 출력(초과 시 줄바꿈)
+SET LINESIZE 20
+SELECT empno, ename
+FROM emp;
 
-//P.34
-SELECT PROFNO, NAME, PAY
-FROM PROFESSOR;
+--31
+    --데이터가 숫자일 경우. empno라는 컬럼의 길이를 숫자 4자리까지 들어가게 설정
+COL deptno FOR 9999
+    --데이가 문자일 경우. ename이란 컬럼의 길이를 15바이트까지 들어가게 설정
+COL dname FOR a15;
+    --한 화면에 출력 가능한 줄 길이 설정(가로 길이 설정). 한 화면을 가로로 200바이트까지 출력
+SET LINESIZE 200
+    --한 페이지에 출력 가능한 줄 수 설정(세로 길이 설정). 한 페이지에 50줄까지 출력
+SET PAGESIZE 50
+COL loc FOR a15
+SELECT depto, dname, loc;
+/
 
-SELECT PROFNO "prof's NO", name AS "prof's NAME", pay prof_pay
-from professor;
+--32
+SET PAGESIZE 50
+COL name FOR a30
+SELECT name, 'good morning~~!' "Good Morning"
+FROM professor;
 
-//p.35
-select deptno from emp;
+--33
+SELECT dname, ',it''s deptno: ', deptno "DNAME AND DEPTNO"
+FROM dept;
 
-select distinct deptno from emp;
+SELECT dname, q'[, it's deptno : ]', deptno "DANCE AND DEPTNO"
+FROM dept;
 
-//p.36
-select job, ename from emp order by 1,2;
 
-select distinct job, ename from emp order by 1,2;
+--34
+SELECT profno, name, pay FROM professor;
 
-//p.37
-select job, distinct ename from emp order by 1,2;
+SELECT profno "Pfor's NO", name AS "Prof's NAME", pay Prof_Pay 
+FROM professor;
 
-select ename, job from emp;
+--35
+SELECT deptno FROM emp;
 
-select ename || job from emp;
+SELECT DISTINCT deptno FROM emp;
 
-//p.38
-select ename || '-'||job from emp;
+--36
+SELECT job, ename FROM emp ORDER BY 1,2;
 
-select ename || ' ''s job is ' || job "NAME AND JOB" FROM EMP;
+SELECT DISTINCT job, ename FROM emp ORDER BY 1,2;
 
-//P.39~40 연습문제 일단 KEEP
+--37
+--SELECT job, DISTINCT ename FROM emp ORDER BY 1,2;
+-- DISTINCT는 반드시 SELECT 뒤에 와야 함.
 
-// p.41
-select empno, ename from emp where empno=7900;
+SELECT ename, job FROM emp;
 
-select ename, sal from emp where sal < 900;
+SELECT ename || job FROM emp;
 
-select empno, ename, sal from emp where ename =SMITH;
+SELECT ename ||'-'|| job FROM emp;
 
-select empno, ename, sal from emp where ename = 'SMITH';
+SELECT ename ||'''s job is '|| job "NAME AND JOB" FROM emp;
 
-//p.42
-select empno, ename, sal from emp where ename = 'smith';
+--39 
+--연습문제1
+SELECT NAME || '''S ID: '||ID||' , WEIGTH is '||WEIGHT||'kg' AS "ID AND EIGHT" FROM student;
 
-select ename, hiredate from emp where ename = 'SMITH';
+--연습문제2
+SELECT ename ||'('||job||'), '|| ename ||''''||job||'''' FROM emp;
 
-SELECT ename, hiredate from emp where ename = 'SMITH';
+--40
+--연습문제3
+SELECT ename||'''s sal is $'||SAL FROM emp;
 
-select empno, ename, sal from emp where hiredate = '80/12/17';
+--41
+SELECT empno, ename
+    FROM emp
+    WHERE empno=7900;
 
-//p.43
-select empno, ename, sal from emp whrer hiredate = 80/12/17 ;
+SELECT ename, sal FROM emp WHERE sal<900;
 
-//..p,44
-select ename, sal from emp where deptno = 10;
+--SELECT empno, ename, sal FROM emp WHERE ename=SMITH;
 
-select ename, sal+100 from emp where deptno = 10;
+SELECT empno, ename, sal FROM emp WHERE ename='SMITH';
 
-select ename, sal*1.1 from emp where deptno = 10;
+--42
+SELECT empno, ename, sal FROM emp WHERE ename = 'smith';
 
-//p.45
-select empno, ename, sal from emp where sal >= 4000;
+SELECT ename, hiredate FROM emp WHERE ename = 'SMITH';
 
-select empno, ename, sal from emp where ename >= 'W';
-
-//p.46
-select ename, hiredate from emp;
-
-select ename, hiredate from  emp where hiredate >= '81/12/25';
-
-//p.47
-
-select ename, hiredate from emp;
-
-select empno, ename, sal from emp where sal between 2000 and 3000;
-
-//p.48
-select empno, ename, sal from emp where sal >=2000 and sal <= 3000;
-
-select ename from emp order by ename;
-select ename from emp where ename between 'JAMES' and 'MARTIN' order by ename;
-
-//p.49
-select empno, ename, deptno from emp where deptno IN (10,20);
-
-select empno, ename, sal from emp where sal like '1%';
-
-select empno, ename, sal from emp where ename like 'A%';
-
-//p.50
-select empno, ename, hiredate from emp where hiredate like '%80'; //출력값 없음
-
-select empno, ename, hiredate form emp where hiredate like %80;
-
-select empno, ename, hiredate from emp where hiredate like '___DEC%';//출력값 없음
-
-select empno, ename, hiredate from emp where hiredate like '___12%';
-
-//p.52
-select empno, ename, comm from emp where deptno IN (20,30);
-
-select empno, ename, comm from emp where comm = NULL;
-
-//p.53
-
-select empno, ename, comm from emp where comm is NULL;
-
-select empno, ename, comm from emp where comm is not NULL;
-
-//p.54
-select ename, hiredate, sal from emp where hiredate > '82/01/01' and sal >= 1300;//ORA-01858: 숫자가 있어야 하는 위치에서 숫자가 아닌 문자가 발견되었습니다.
-
-select ename, hiredate, sal from emp where hiredate > '82/01/01' or sal >= 1300;
-
-select ename, hiredate, sal, comm from emp where sal > 1000 and (comm < 1000 or comm is null);
-
-select ename, hiredate, sal, comm from emp where sal > 1000 and comm < 1000 or comm is null;
-
-//p.55
-select empno, ename, sal from emp where empno = &empno;
-
-set verify off
-select empno, ename, sal from emp where empno = &empno;
-
-//p.56
-select empno, ename from emp where sal = 3000;
-
-
-
-
-
-
-
-
-
+SELECT empno, ename, sal FROM emp WHERE hiredate = '80/12/17';
 
 
 
