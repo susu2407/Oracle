@@ -1,0 +1,102 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="92AC3E58-CF4A-AA47-7905-4FA46AB9A70A" name="bank_account">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-11 02:25:40 UTC</createdTime>
+<ownerDesignName>BankERD</ownerDesignName>
+<ordsAlias>table_5</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="a_no" id="D40AD10E-8082-326B-515F-7A66A82306DD">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-11 02:26:05 UTC</createdTime>
+<ownerDesignName>BankERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>11</dataTypeSize>
+<ownDataTypeParameters>11,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="a_item_dist" id="ACFE76A4-3885-476C-6898-1CC824F921AB">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-11 02:26:05 UTC</createdTime>
+<ownerDesignName>BankERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>2</dataTypeSize>
+<ownDataTypeParameters>2,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="a_item_name" id="72FE2C93-364A-BB26-629D-D3600AC691FC">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-11 02:26:05 UTC</createdTime>
+<ownerDesignName>BankERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="a_c_no" id="BB11CFA5-74FE-4E09-1171-DCF65AA305FC">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-11 02:26:05 UTC</createdTime>
+<ownerDesignName>BankERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>14</dataTypeSize>
+<ownDataTypeParameters>14,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FCA4A7AA-3FBD-71CE-023A-346A08939868" referredColumn="F23FCAD8-5CB9-7C9C-BF7B-16DFD1D721E8"/>
+</associations>
+</Column>
+<Column name="a_balance" id="B1F3D2F0-0F94-061A-14EB-FB68485E965D">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-11 02:26:05 UTC</createdTime>
+<ownerDesignName>BankERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="a_open_date" id="2A094489-1988-D7FA-D68A-E27A32446036">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-11 02:26:05 UTC</createdTime>
+<ownerDesignName>BankERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="7EA25761-EF61-E50F-28DC-9684947EACF4" name="bank_account_PK">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-11 02:26:05 UTC</createdTime>
+<ownerDesignName>BankERD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D40AD10E-8082-326B-515F-7A66A82306DD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C967C525-2B8F-ECCD-5AFE-C813428475A2" name="bank_account_bank_customer_FK">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-11 02:33:30 UTC</createdTime>
+<ownerDesignName>BankERD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BB11CFA5-74FE-4E09-1171-DCF65AA305FC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
