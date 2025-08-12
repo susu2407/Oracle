@@ -1,0 +1,183 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="586EEBF3-4225-D6FF-426D-701225E838C6" name="Patient">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 02:15:16 UTC</createdTime>
+<ownerDesignName>HospitalERD</ownerDesignName>
+<ordsAlias>table_3</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="pat_id" id="CFF2D16B-CFFC-1C81-887E-852CC390AB15">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 02:25:06 UTC</createdTime>
+<ownerDesignName>HospitalERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>7 BYTE</dataTypeSize>
+<ownDataTypeParameters>7 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="doc_id" id="92E2E30F-BAF5-A349-8047-F4507DFDFB52">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 02:25:06 UTC</createdTime>
+<ownerDesignName>HospitalERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>7 BYTE</dataTypeSize>
+<ownDataTypeParameters>7 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B8F953D8-DE6C-05EC-491E-3CDD8EA30E4A" referredColumn="A2420373-916D-8BE0-567A-A98B569E4E2B"/>
+</associations>
+</Column>
+<Column name="nur_id" id="62A1CE44-C37F-4E95-EB02-C42AD152D4B7">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 02:25:06 UTC</createdTime>
+<ownerDesignName>HospitalERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>7 BYTE</dataTypeSize>
+<ownDataTypeParameters>7 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="AE357BA1-3F78-497F-483F-B12A7E2DA142" referredColumn="9E0D6D75-7637-4645-1EBF-4998049A74D5"/>
+</associations>
+</Column>
+<Column name="pat_name" id="C763A649-7AA0-3899-3C30-6430903911D4">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 02:25:06 UTC</createdTime>
+<ownerDesignName>HospitalERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>45 BYTE</dataTypeSize>
+<ownDataTypeParameters>45 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="pat_jumin" id="A885E17D-2E15-3A61-1A69-C8A16B6E2403">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 02:25:06 UTC</createdTime>
+<ownerDesignName>HospitalERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>14 BYTE</dataTypeSize>
+<ownDataTypeParameters>14 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="pat_gen" id="47D2E21C-209C-AF41-A1D4-872C64172831">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 02:25:06 UTC</createdTime>
+<ownerDesignName>HospitalERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1 BYTE</dataTypeSize>
+<ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="pat_addr" id="19334525-AE08-BC89-E4E4-3DB12D3C1C21">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 02:25:06 UTC</createdTime>
+<ownerDesignName>HospitalERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="pat_phone" id="71AFABCF-8412-C472-432F-0AC48239C8EF">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 02:25:06 UTC</createdTime>
+<ownerDesignName>HospitalERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>45 BYTE</dataTypeSize>
+<ownDataTypeParameters>45 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="pat_email" id="E07A2B2D-6271-C5DB-7142-FFBA219A8FF0">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 02:25:06 UTC</createdTime>
+<ownerDesignName>HospitalERD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>45 BYTE</dataTypeSize>
+<ownDataTypeParameters>45 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="pat_job" id="67ED2814-FA0A-07E7-E637-E8FAB29D9AC0">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 02:25:06 UTC</createdTime>
+<ownerDesignName>HospitalERD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>45 BYTE</dataTypeSize>
+<ownDataTypeParameters>45 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="89DC3033-E13C-A1DD-E8D6-F594E0481BC4" name="Patient_PK">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 02:25:06 UTC</createdTime>
+<ownerDesignName>HospitalERD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CFF2D16B-CFFC-1C81-887E-852CC390AB15"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DA053B77-AEF6-04EC-C473-9D40B4155727" name="pat_phone_UK">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 02:30:25 UTC</createdTime>
+<ownerDesignName>HospitalERD</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="71AFABCF-8412-C472-432F-0AC48239C8EF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D6E675B7-38CD-3B56-8BA8-E8EA5E29D22A" name="pat_email_UK">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 02:30:25 UTC</createdTime>
+<ownerDesignName>HospitalERD</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E07A2B2D-6271-C5DB-7142-FFBA219A8FF0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D1FC62E0-6C70-17B9-5441-45564A449C85" name="Patient_Doctor_FK">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 02:38:34 UTC</createdTime>
+<ownerDesignName>HospitalERD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="92E2E30F-BAF5-A349-8047-F4507DFDFB52"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9D3E722E-7C27-3D45-B0CE-A4520B916D4A" name="Patient_Nurse_FK">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 02:38:38 UTC</createdTime>
+<ownerDesignName>HospitalERD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="62A1CE44-C37F-4E95-EB02-C42AD152D4B7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

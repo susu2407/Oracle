@@ -1,0 +1,147 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="408F2C28-4730-F2CC-726C-1D33BCAF97E2" name="Nurse">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 02:15:36 UTC</createdTime>
+<ownerDesignName>HospitalERD</ownerDesignName>
+<ordsAlias>table_4</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="nur_id" id="9E0D6D75-7637-4645-1EBF-4998049A74D5">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 02:27:28 UTC</createdTime>
+<ownerDesignName>HospitalERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>7 BYTE</dataTypeSize>
+<ownDataTypeParameters>7 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="dep_no" id="C016F6E7-18D4-F32D-19B2-6BC5FB9246A7">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 02:27:28 UTC</createdTime>
+<ownerDesignName>HospitalERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>3 BYTE</dataTypeSize>
+<ownDataTypeParameters>3 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="EACFB1BD-99CB-7FC7-0703-F12DB825E8F4" referredColumn="26AD18DA-95B5-453F-54FF-C96D3000CB59"/>
+</associations>
+</Column>
+<Column name="nur_name" id="280B265B-4107-EC42-F3BA-77A9E187FDDB">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 02:27:28 UTC</createdTime>
+<ownerDesignName>HospitalERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nur_birth" id="7622DB7E-8E05-5853-C143-422789F1F789">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 02:27:28 UTC</createdTime>
+<ownerDesignName>HospitalERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>10 BYTE</dataTypeSize>
+<ownDataTypeParameters>10 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nur_gender" id="E79762A2-16EF-4911-D417-9B83AD538FB3">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 02:27:28 UTC</createdTime>
+<ownerDesignName>HospitalERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1 BYTE</dataTypeSize>
+<ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nur_pos" id="859DDF08-9C53-04F0-1CF7-6DD1DD18BDB0">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 02:27:28 UTC</createdTime>
+<ownerDesignName>HospitalERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nur_phone" id="65DF6C28-BEE9-B4EB-F426-ACA35122A4B3">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 02:27:28 UTC</createdTime>
+<ownerDesignName>HospitalERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>13 BYTE</dataTypeSize>
+<ownDataTypeParameters>13 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nur_email" id="3FD0C460-A72D-C2B5-3F86-DF3DC43FCD02">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 02:27:28 UTC</createdTime>
+<ownerDesignName>HospitalERD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B10574A5-BE4C-83AD-5D68-676E67B1E1D5" name="Nurse_PK">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 02:27:28 UTC</createdTime>
+<ownerDesignName>HospitalERD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9E0D6D75-7637-4645-1EBF-4998049A74D5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E9D98897-4231-29CB-B46C-9EAB53E1C3AB" name="nur_phone_UK">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 02:29:42 UTC</createdTime>
+<ownerDesignName>HospitalERD</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="65DF6C28-BEE9-B4EB-F426-ACA35122A4B3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="66F7A801-33D4-B13B-7643-FBB9337BD5F6" name="nur_email_UK">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 02:29:42 UTC</createdTime>
+<ownerDesignName>HospitalERD</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3FD0C460-A72D-C2B5-3F86-DF3DC43FCD02"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9D5DC0E1-A9B6-D670-B9F4-2D19A805FE7B" name="Nurse_Department_FK">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 02:38:17 UTC</createdTime>
+<ownerDesignName>HospitalERD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C016F6E7-18D4-F32D-19B2-6BC5FB9246A7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
