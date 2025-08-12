@@ -8,7 +8,7 @@
 <referredTableID>DB3B5677-71EF-5F4F-9E91-089A5D0E3641</referredTableID>
 <keyObject>99175200-D6B8-8863-D0F4-2B6993E20E3E</keyObject>
 <referredKeyID>99175200-D6B8-8863-D0F4-2B6993E20E3E</referredKeyID>
-<mandatory>true</mandatory>
+<mandatory>false</mandatory>
 <refColNames>dep_no</refColNames>
 <transferable>true</transferable>
 <rely>false</rely>

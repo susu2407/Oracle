@@ -31,32 +31,36 @@
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
-<colAssociation fkAssociation="485CD90D-28B5-058D-4B62-97BA4BC62563" referredColumn="90C21BEB-8C6B-ABB6-0984-203DF790FB14"/>
+<colAssociation fkAssociation="B9AC354D-7400-3843-98D4-8E5A350B00EE" referredColumn="90C21BEB-8C6B-ABB6-0984-203DF790FB14"/>
 </associations>
 </Column>
 <Column name="doc_id" id="68AA36CC-F6C4-2C6F-2489-7E243BD8098C">
 <createdBy>GGG</createdBy>
 <createdTime>2025-08-12 02:32:21 UTC</createdTime>
 <ownerDesignName>HospitalERD</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT025</logicalDatatype>
 <dataTypeSize>7 BYTE</dataTypeSize>
 <ownDataTypeParameters>7 BYTE,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B9AC354D-7400-3843-98D4-8E5A350B00EE" referredColumn="1EAC22F6-BBDE-EE92-5BE7-7926B25C8798"/>
+</associations>
 </Column>
 <Column name="pat_id" id="0003F890-DF89-024A-A023-E21524D4D4B4">
 <createdBy>GGG</createdBy>
 <createdTime>2025-08-12 02:32:21 UTC</createdTime>
 <ownerDesignName>HospitalERD</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT025</logicalDatatype>
 <dataTypeSize>7 BYTE</dataTypeSize>
 <ownDataTypeParameters>7 BYTE,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B9AC354D-7400-3843-98D4-8E5A350B00EE" referredColumn="C61EF6A6-4FA6-C037-F9A5-A17334DB5B2E"/>
+</associations>
 </Column>
 <Column name="chart_desc" id="447030B0-AB49-09EC-616A-2C6EACB100A8">
 <createdBy>GGG</createdBy>
@@ -82,14 +86,16 @@
 <colUsage columnID="D4149A56-4DDB-EF0B-46F7-C7AE66A1897E"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="5FBC3F48-2C2A-F207-5225-07B763DF6644" name="Chart_Treatment_FK">
+<ind_PK_UK id="A5ECEA98-6272-3085-1191-A6BDFEB467A4" name="Chart_Treatment_FKv3">
 <createdBy>GGG</createdBy>
-<createdTime>2025-08-12 02:38:55 UTC</createdTime>
+<createdTime>2025-08-12 03:13:55 UTC</createdTime>
 <ownerDesignName>HospitalERD</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="D48AF8D3-895B-07A0-8204-F120C4F16753"/>
+<colUsage columnID="68AA36CC-F6C4-2C6F-2489-7E243BD8098C"/>
+<colUsage columnID="0003F890-DF89-024A-A023-E21524D4D4B4"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

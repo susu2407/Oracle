@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="FF0F2087-5F2A-02D7-1B9E-5EA94F7A66D4" mainViewID="F15D6181-6C4F-6884-99AE-A9DB9DB14BD2">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 05:30:53 UTC</createdTime>
+<ownerDesignName>BookOrderERD</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>

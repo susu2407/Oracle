@@ -8,7 +8,7 @@
 <referredTableID>408F2C28-4730-F2CC-726C-1D33BCAF97E2</referredTableID>
 <keyObject>B10574A5-BE4C-83AD-5D68-676E67B1E1D5</keyObject>
 <referredKeyID>B10574A5-BE4C-83AD-5D68-676E67B1E1D5</referredKeyID>
-<mandatory>true</mandatory>
+<mandatory>false</mandatory>
 <refColNames>nur_id</refColNames>
 <transferable>true</transferable>
 <rely>false</rely>

@@ -1,0 +1,96 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="948A2A41-180C-7BE7-F182-0107298CBD64" name="BO_OrderItem">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 06:24:49 UTC</createdTime>
+<ownerDesignName>BookOrderERD</ownerDesignName>
+<ordsAlias>table_2</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="orderNo" id="694B59BA-1D1C-3A0B-2483-A3F9A6DE6671">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 06:27:35 UTC</createdTime>
+<ownerDesignName>BookOrderERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F8BB1A7A-1A90-52F9-492A-8CFF10685738" referredColumn="9EBDAA82-0C13-A62C-2E5A-0DF38DC37372"/>
+</associations>
+</Column>
+<Column name="bookId" id="AEEF71C6-538F-A96D-2967-B65A5AD3CBD4">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 06:26:47 UTC</createdTime>
+<ownerDesignName>BookOrderERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="56AA6151-B548-285F-FEAE-3F2AD547598F" referredColumn="D3705BA4-7F7B-2970-F02B-4459937701E0"/>
+</associations>
+</Column>
+<Column name="price" id="B15C2A79-2CAF-CC6D-27C4-098A46F86F50">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 06:24:49 UTC</createdTime>
+<ownerDesignName>BookOrderERD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="count" id="18BABE9F-E271-3F8E-6DDB-E5303178FE8D">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 06:25:42 UTC</createdTime>
+<ownerDesignName>BookOrderERD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="7141304A-607E-35F0-193B-D11C1FADD054" name="BO_Order3v1_PK">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 06:24:49 UTC</createdTime>
+<ownerDesignName>BookOrderERD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AEEF71C6-538F-A96D-2967-B65A5AD3CBD4"/>
+<colUsage columnID="694B59BA-1D1C-3A0B-2483-A3F9A6DE6671"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E01B0163-2018-3A6B-C67F-07AE1938A060" name="BO_OrderItem_BO_Book3_FK">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 06:26:47 UTC</createdTime>
+<ownerDesignName>BookOrderERD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AEEF71C6-538F-A96D-2967-B65A5AD3CBD4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DC3FE597-B79E-ADDA-A9D2-4C3CA9B4A6B7" name="BO_OrderItem_BO_Order3_FK">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 06:27:35 UTC</createdTime>
+<ownerDesignName>BookOrderERD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="694B59BA-1D1C-3A0B-2483-A3F9A6DE6671"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

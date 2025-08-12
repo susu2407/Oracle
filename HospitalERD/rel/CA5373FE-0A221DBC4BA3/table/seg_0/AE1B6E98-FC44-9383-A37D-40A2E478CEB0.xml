@@ -27,7 +27,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT025</logicalDatatype>
 <dataTypeSize>7 BYTE</dataTypeSize>
-<ownDataTypeParameters>7 BYTE,,</ownDataTypeParameters>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
 <colAssociation fkAssociation="816D4C6C-493A-BB6F-AA63-6B58900AF43E" referredColumn="A2420373-916D-8BE0-567A-A98B569E4E2B"/>
@@ -41,7 +41,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT025</logicalDatatype>
 <dataTypeSize>7 BYTE</dataTypeSize>
-<ownDataTypeParameters>7 BYTE,,</ownDataTypeParameters>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
 <colAssociation fkAssociation="3DE4850A-DCFA-7213-1391-BA051913185F" referredColumn="CFF2D16B-CFFC-1C81-887E-852CC390AB15"/>
@@ -79,6 +79,8 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="90C21BEB-8C6B-ABB6-0984-203DF790FB14"/>
+<colUsage columnID="1EAC22F6-BBDE-EE92-5BE7-7926B25C8798"/>
+<colUsage columnID="C61EF6A6-4FA6-C037-F9A5-A17334DB5B2E"/>
 </indexColumnUsage>
 </ind_PK_UK>
 <ind_PK_UK id="A739AC1B-946C-7CA5-B8E3-4310BC395285" name="Treatment_Doctor_FK">

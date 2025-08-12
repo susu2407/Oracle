@@ -8,7 +8,7 @@
 <referredTableID>830782AB-5CCD-3D79-38FD-80D1B726E7C6</referredTableID>
 <keyObject>826E7071-7A26-31DF-A355-FDA5B7EBEF3E</keyObject>
 <referredKeyID>826E7071-7A26-31DF-A355-FDA5B7EBEF3E</referredKeyID>
-<mandatory>true</mandatory>
+<mandatory>false</mandatory>
 <refColNames>doc_id</refColNames>
 <transferable>true</transferable>
 <rely>false</rely>

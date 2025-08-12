@@ -434,10 +434,11 @@ WHERE NOT EXISTS (
 );
 
 -- 또는
-SELECT a.sellerNo,
-       a.company,
-       a.manager,
-       a.tel
+SELECT 
+    a.sellerNo,
+    a.company,
+    a.manager,
+    a.tel
 FROM SELLER a
 LEFT JOIN PRODUCT b
     ON a.sellerNo = b.sellerNo

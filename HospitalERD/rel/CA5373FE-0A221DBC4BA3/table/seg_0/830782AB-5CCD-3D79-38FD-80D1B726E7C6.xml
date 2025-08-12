@@ -23,6 +23,7 @@
 <createdBy>GGG</createdBy>
 <createdTime>2025-08-12 02:22:42 UTC</createdTime>
 <ownerDesignName>HospitalERD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT025</logicalDatatype>
