@@ -286,26 +286,79 @@ join patient b on a.pat_id = b.pat_id
 join chart c on a.pat_id = c.pat_id
 join doctor d on b.doc_id = d.doc_id;
 
--- 문제5. 모든 진료내역에서 '외과'에서 진료한 내역 가운데 진료번호, 환자이름, 담당의사명, 진료내용, 처방내용, 진료날짜를 조회하시오. 
+-- 문제5. 모든 진료내역에서
+-- 진료번호, 환자이름, 담당의사명, 진료내용, 처방내용, 진료날짜를 조회하시오.
+-- '외과'에서 진료한 내역 가운데 
 select
-    a.treat_no
-from treatment a
-join doctor b on a.doc_id = b.doc_id
-join department c on b.dep_no = c.dep_no
-join patient d on b.doc_id = b.doc_id
+    a.treat_no as 진료번호,
+    b.pat_name as 환자이름,
+    d.doc_name as 담당의사명,
+    a.treat_desc as 진료내용,
+    c.chart_desc as 처방내용,
+    a.treat_datetime as 진료날짜
+from treatment a 
+join patient b on a.pat_id = b.pat_id 
+join chart c on a.treat_no = c.treat_no
+join doctor d on b.doc_id = d.doc_id
+join department e on d.dep_no = d.dep_no
 where dep_name = '외과';
 
--- 문제6. 모든 진료내역에서 '화상'으로 진료한 내역 가운데 진료번호, 환자이름, 담당의사명, 진료내용,처방내용, 진료날짜를 조회하시오. 
+-- 문제6. 모든 진료내역에서 '화상'으로 진료한 내역 가운데 진료번호, 환자이름, 담당의사명, 진료내용, 처방내용, 진료날짜를 조회하시오. 
+select
+    a.treat_no as 진료번호,
+    b.pat_name as 환자이름,
+    d.doc_name as 담당의사명,
+    a.treat_desc as 진료내용,
+    c.chart_desc as 처방내용,
+    a.treat_datetime as 진료날짜
+from treatment  a 
+join patient    b on a.pat_id   = b.pat_id 
+join chart      c on a.treat_no = c.treat_no
+join doctor     d on b.doc_id   = d.doc_id
+join department e on d.dep_no   = e.dep_no
+where treat_desc like '%화상%';
 
 
--- 문제7. 현재 날짜를 기준으로 30세 이상 ~ 40세 미만 환자를 조회하시오. 
+-- 문제7. 현재 날짜를 기준으로 30세 이상 ~ 40세 미만 환자를 조회하시오.
+select * from 
+    (select a.*,
+           EXTRACT(YEAR FROM SYSDATE) - TO_NUMBER('19' || SUBSTR(pat_jumin, 1, 2)) AS age
+    from patient a ) b
+where age >=30 and age < 40;
 
 
 -- 문제8. 모든 전공부서에서 아직 의사ID가 부여되지 않은 의사의 이름과 부서명을 조회하시오. 
+select
+    a.dep_manager,
+    a.dep_name
+from department a 
+left join doctor b on a.dep_no = b.dep_no
+where b.doc_id is null;
 
 
 -- 문제9. 김태희 간호사가 맡고 있는 모든 환자의 이름을 구분자 ^으로 해서 '강동원^고소영^이나영'과 같이 조회하시오. 
-
+select 
+    listagg(pat_name, '^') within group (order by pat_name) as 환자들
+from nurse a 
+join patient b on a.nur_id = b.nur_id
+where nur_name = '김태희';
 
 -- 문제10. 가장 많은 환자 수를 담당하는 간호사ID, 간호사 이름, 담당환자수를 조회 하시오.
+select
+    b.nur_id,
+    b.nur_name,
+    count(a.pat_id) as 환자수 
+from patient a
+    join nurse b on a.nur_id = b.nur_id
+group by b.nur_id, b.nur_name
+having count(a.pat_id) = (
+    select
+        max(환자수2)
+    from (
+        select
+            count(pat_id) as 환자수2
+        from patient
+        group by nur_id
+        )
+);
 
