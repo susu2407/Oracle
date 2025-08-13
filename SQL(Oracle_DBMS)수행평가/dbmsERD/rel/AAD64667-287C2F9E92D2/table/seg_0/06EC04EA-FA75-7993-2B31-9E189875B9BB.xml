@@ -1,0 +1,104 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="06EC04EA-FA75-7993-2B31-9E189875B9BB" name="Account">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-13 00:04:16 UTC</createdTime>
+<ownerDesignName>dbmsERD</ownerDesignName>
+<ordsAlias>table_3</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="acc_id" id="B712FBF9-0E6C-A16E-A73F-5928EC00588B">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-13 00:12:37 UTC</createdTime>
+<ownerDesignName>dbmsERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>14 BYTE</dataTypeSize>
+<ownDataTypeParameters>14 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cust_jumin" id="FE6295D0-9B14-F94B-6872-AAE3ED064E7E">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-13 00:12:37 UTC</createdTime>
+<ownerDesignName>dbmsERD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>14 BYTE</dataTypeSize>
+<ownDataTypeParameters>14 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="626AF0CA-1E61-C25D-5942-99BC469127FD" referredColumn="18667723-911B-33E4-197C-484FD12D4181"/>
+</associations>
+</Column>
+<Column name="acc_type" id="2CAC847F-AEAF-23B9-3E54-AFD8E31C67A4">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-13 00:12:37 UTC</createdTime>
+<ownerDesignName>dbmsERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="acc_balance" id="81059816-23AF-6BEE-3759-AAC55FCE505E">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-13 00:12:37 UTC</createdTime>
+<ownerDesignName>dbmsERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="acc_card" id="B390F884-CA34-B317-2BDC-D12ED7E414F6">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-13 00:12:37 UTC</createdTime>
+<ownerDesignName>dbmsERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1 BYTE</dataTypeSize>
+<ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="acc_register_date" id="29C5E5B5-AA3D-2AB8-B792-986BBEC0FC52">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-13 00:12:37 UTC</createdTime>
+<ownerDesignName>dbmsERD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5B5427CC-0589-C607-9F49-829F4E8B61DF" name="Account_PK">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-13 00:12:37 UTC</createdTime>
+<ownerDesignName>dbmsERD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B712FBF9-0E6C-A16E-A73F-5928EC00588B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0A137160-126F-4B58-DA6D-D4960EA20B23" name="Account_Customer_FK">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-13 00:18:05 UTC</createdTime>
+<ownerDesignName>dbmsERD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FE6295D0-9B14-F94B-6872-AAE3ED064E7E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

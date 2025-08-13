@@ -1,0 +1,104 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B86A6F6F-B7DA-659D-A011-520C876C9104" name="Customer">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-13 00:04:07 UTC</createdTime>
+<ownerDesignName>dbmsERD</ownerDesignName>
+<ordsAlias>table_1</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="cust_jumin" id="18667723-911B-33E4-197C-484FD12D4181">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-13 00:08:25 UTC</createdTime>
+<ownerDesignName>dbmsERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>14 BYTE</dataTypeSize>
+<ownDataTypeParameters>14 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="name" id="9D9CB3D5-2EEE-7C35-DC3F-BB09F11A6FED">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-13 00:08:25 UTC</createdTime>
+<ownerDesignName>dbmsERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="address" id="490B55A5-C5C2-19AF-F24A-7D9AD029A876">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-13 00:08:25 UTC</createdTime>
+<ownerDesignName>dbmsERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="birth" id="787FB3C4-8763-D41B-FE64-3E10A7AA9563">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-13 00:08:25 UTC</createdTime>
+<ownerDesignName>dbmsERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>10 BYTE</dataTypeSize>
+<ownDataTypeParameters>10 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="email" id="F7C78C24-2CF0-2D0D-79E7-E3E9587C1937">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-13 00:08:25 UTC</createdTime>
+<ownerDesignName>dbmsERD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="hp" id="B5ABC88B-0A7D-F5A7-CBEE-A7C747AFAF2C">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-13 00:08:25 UTC</createdTime>
+<ownerDesignName>dbmsERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="job" id="ACCE2D7F-F8FC-81A0-2BCA-87E9BB7752AB">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-13 00:08:25 UTC</createdTime>
+<ownerDesignName>dbmsERD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="7F579879-67D3-B6B0-27B1-D63C8829834E" name="Customer_PK">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-13 00:08:25 UTC</createdTime>
+<ownerDesignName>dbmsERD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="18667723-911B-33E4-197C-484FD12D4181"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

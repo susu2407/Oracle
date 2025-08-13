@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="dbmsERD" id="2F4534D9-F3BC-DD70-6E1E-C388FD27C8FF" version="3.5">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-13 00:03:23 UTC</createdTime>
+<ownerDesignName>dbmsERD</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>2F4534D9-F3BC-DD70-6E1E-C388FD27C8FF</designId>
+</OSDM_Design>
